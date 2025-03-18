@@ -1,13 +1,307 @@
-     git remote set-url origin https://{TOKEN}@github.com/jinwooleegit/potteryclass.git
-     cd C:\Users\user\Desktop\pottery-class
-     echo. > chapter1\.gitkeep
-     echo. > chapter2\.gitkeep
-     echo. > chapter3\.gitkeep
-     echo. > chapter4\.gitkeep
-     echo. > chapter5\.gitkeep
-     echo. > chapter6\.gitkeep
-     echo. > images\.gitkeep
-     echo. > js\.gitkeep
-     git add .
-     git commit -m "빈 폴더 추가"
-     git push origin main
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="도예 관련 용어 모음집입니다. 도예를 배우는 과정에서 자주 사용되는 용어들을 알파벳순으로 정리했습니다.">
+    <meta name="author" content="도예수업">
+    <meta name="theme-color" content="#1e88e5">
+    <title>도예용어집 - 도예수업</title>
+    
+    <!-- 파비콘 -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    
+    <!-- 폰트 최적화 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Open Graph 태그 -->
+    <meta property="og:title" content="도예용어집 - 도예수업">
+    <meta property="og:description" content="도예 관련 용어 모음집입니다. 도예를 배우는 과정에서 자주 사용되는 용어들을 알파벳순으로 정리했습니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/og-image.jpg">
+    
+    <!-- 구조화된 데이터 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "가소성",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "점토가 변형되거나 형태를 유지할 수 있는 성질을 의미합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "시유",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "도자기의 표면에 유약을 바르는 과정을 말합니다."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- 스킵 네비게이션 -->
+    <a href="#main-content" class="skip-link">본문으로 바로가기</a>
+    
+    <div class="container fade-in">
+        <!-- global-menu.js에서 자동으로 추가됨 -->
+        
+        <header class="terms-header">
+            <h1>도예용어집</h1>
+            <p class="subtitle">도예를 배우는 과정에서 자주 사용되는 용어들을 정리했습니다.</p>
+        </header>
+        
+        <main id="main-content">
+            <section class="terms-search">
+                <div class="search-container">
+                    <input type="text" id="terms-search-input" placeholder="용어 검색..." aria-label="용어 검색">
+                </div>
+            </section>
+            
+            <nav class="alphabet-nav" aria-label="알파벳 내비게이션">
+                <ul>
+                    <li><a href="#section-ㄱ">ㄱ</a></li>
+                    <li><a href="#section-ㄴ">ㄴ</a></li>
+                    <li><a href="#section-ㄷ">ㄷ</a></li>
+                    <li><a href="#section-ㄹ">ㄹ</a></li>
+                    <li><a href="#section-ㅁ">ㅁ</a></li>
+                    <li><a href="#section-ㅂ">ㅂ</a></li>
+                    <li><a href="#section-ㅅ">ㅅ</a></li>
+                    <li><a href="#section-ㅇ">ㅇ</a></li>
+                    <li><a href="#section-ㅈ">ㅈ</a></li>
+                    <li><a href="#section-ㅊ">ㅊ</a></li>
+                    <li><a href="#section-ㅋ">ㅋ</a></li>
+                    <li><a href="#section-ㅌ">ㅌ</a></li>
+                    <li><a href="#section-ㅍ">ㅍ</a></li>
+                    <li><a href="#section-ㅎ">ㅎ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="terms-list">
+                <!-- ㄱ -->
+                <section id="section-ㄱ" class="terms-section">
+                    <h2>ㄱ</h2>
+                    <dl>
+                        <div class="term-item">
+                            <dt>가소성</dt>
+                            <dd>점토가 변형되거나 형태를 유지할 수 있는 성질을 의미합니다. 도예에서 성형의 기본이 되는 중요한 특성입니다.</dd>
+                        </div>
+                        <div class="term-item">
+                            <dt>고화도 소성</dt>
+                            <dd>1200℃ 이상의 높은 온도에서 도자기를 구워내는 방식으로, 자기나 석기를 만들 때 사용됩니다.</dd>
+                        </div>
+                        <div class="term-item">
+                            <dt>굽</dt>
+                            <dd>도자기의 밑부분에 있는 받침 부분으로, 안정적으로 세울 수 있게 해줍니다.</dd>
+                        </div>
+                    </dl>
+                </section>
+                
+                <!-- ㄴ -->
+                <section id="section-ㄴ" class="terms-section">
+                    <h2>ㄴ</h2>
+                    <dl>
+                        <div class="term-item">
+                            <dt>녹로</dt>
+                            <dd>도자기를 성형할 때 사용하는 회전판. 전기로 작동하는 전기녹로와 발로 돌리는 물레로 구분됩니다.</dd>
+                        </div>
+                    </dl>
+                </section>
+                
+                <!-- ㄷ -->
+                <section id="section-ㄷ" class="terms-section">
+                    <h2>ㄷ</h2>
+                    <dl>
+                        <div class="term-item">
+                            <dt>달걀껍질 백자</dt>
+                            <dd>매우 얇고 투명한 백자로, 빛을 통과시킬 정도로 얇게 제작된 고급 백자를 말합니다.</dd>
+                        </div>
+                        <div class="term-item">
+                            <dt>도침</dt>
+                            <dd>점토를 반죽하고 공기를 빼는 작업을 하는 판으로, 성형 전 준비 과정에서 사용됩니다.</dd>
+                        </div>
+                    </dl>
+                </section>
+                
+                <!-- ㅁ -->
+                <section id="section-ㅁ" class="terms-section">
+                    <h2>ㅁ</h2>
+                    <dl>
+                        <div class="term-item">
+                            <dt>물레</dt>
+                            <dd>점토를 성형하는 데 사용하는 회전 장치로, 전통적으로는 발로 돌리는 형태였으나 현대에는 전동식이 많이 사용됩니다.</dd>
+                        </div>
+                    </dl>
+                </section>
+                
+                <!-- ㅂ -->
+                <section id="section-ㅂ" class="terms-section">
+                    <h2>ㅂ</h2>
+                    <dl>
+                        <div class="term-item">
+                            <dt>백자</dt>
+                            <dd>하얀 백토로 만들어진 도자기로, 순백의 아름다움을 가진 한국 도자기의 대표적인 유형입니다.</dd>
+                        </div>
+                        <div class="term-item">
+                            <dt>분청사기</dt>
+                            <dd>흰 흙물을 바른 회청색 도자기로, 자유로운 문양과 장식이 특징인 한국 전통 도자기입니다.</dd>
+                        </div>
+                    </dl>
+                </section>
+                
+                <!-- ㅅ -->
+                <section id="section-ㅅ" class="terms-section">
+                    <h2>ㅅ</h2>
+                    <dl>
+                        <div class="term-item">
+                            <dt>소성</dt>
+                            <dd>점토를 굽는 과정으로, 초벌소성과 재벌소성으로 나뉩니다. 온도와 시간에 따라 도자기의 특성이 결정됩니다.</dd>
+                        </div>
+                        <div class="term-item">
+                            <dt>시유</dt>
+                            <dd>도자기의 표면에 유약을 바르는 과정을 말합니다. 디핑, 스프레이, 붓칠 등 다양한 방법이 있습니다.</dd>
+                        </div>
+                    </dl>
+                </section>
+                
+                <!-- ㅇ -->
+                <section id="section-ㅇ" class="terms-section">
+                    <h2>ㅇ</h2>
+                    <dl>
+                        <div class="term-item">
+                            <dt>연질 도자기</dt>
+                            <dd>낮은 온도(1100°C 이하)에서 구워진 도자기로, 경질 도자기보다 부드럽고 약한 성질을 가집니다.</dd>
+                        </div>
+                        <div class="term-item">
+                            <dt>옹기</dt>
+                            <dd>주로 저장용으로 사용되는 전통 도자기로, 숨을 쉬는 특성이 있어 발효식품 저장에 적합합니다.</dd>
+                        </div>
+                        <div class="term-item">
+                            <dt>유약</dt>
+                            <dd>도자기 표면에 바르는 유리질 재료로, 방수성과 내구성을 높이고 장식 효과를 줍니다.</dd>
+                        </div>
+                    </dl>
+                </section>
+                
+                <!-- ㅈ -->
+                <section id="section-ㅈ" class="terms-section">
+                    <h2>ㅈ</h2>
+                    <dl>
+                        <div class="term-item">
+                            <dt>자기</dt>
+                            <dd>높은 온도(1200°C 이상)에서 구워진 백색 도자기로, 단단하고 반투명한 특성을 가집니다.</dd>
+                        </div>
+                        <div class="term-item">
+                            <dt>정형</dt>
+                            <dd>성형 후 기물의 형태를 다듬는 작업으로, 굽 깎기, 면 다듬기 등의 과정이 포함됩니다.</dd>
+                        </div>
+                    </dl>
+                </section>
+                
+                <!-- ㅊ -->
+                <section id="section-ㅊ" class="terms-section">
+                    <h2>ㅊ</h2>
+                    <dl>
+                        <div class="term-item">
+                            <dt>청자</dt>
+                            <dd>비취색의 유약이 특징인 고려시대 대표 도자기로, 우아한 형태와 비색(翡色)이 특징입니다.</dd>
+                        </div>
+                        <div class="term-item">
+                            <dt>초벌구이</dt>
+                            <dd>유약을 바르기 전 낮은 온도(800-900°C)에서 첫 번째로 구워내는 과정입니다.</dd>
+                        </div>
+                    </dl>
+                </section>
+                
+                <!-- ㅎ -->
+                <section id="section-ㅎ" class="terms-section">
+                    <h2>ㅎ</h2>
+                    <dl>
+                        <div class="term-item">
+                            <dt>항아리</dt>
+                            <dd>저장용 큰 그릇으로, 주로 음식물이나 곡식 보관에 사용되었던 전통 도자기 용기입니다.</dd>
+                        </div>
+                        <div class="term-item">
+                            <dt>흙물</dt>
+                            <dd>점토를 물에 풀어 만든 액체로, 도자기 부분을 접합하거나 표면을 장식할 때 사용합니다.</dd>
+                        </div>
+                    </dl>
+                </section>
+            </div>
+            
+            <a href="#" class="back-to-top" aria-label="맨 위로 이동">↑ 위로</a>
+        </main>
+        
+        <!-- footer.html에서 자동으로 삽입됨 -->
+        <footer class="main-footer">
+            <p>&copy; 2025 <a href="mailto:milgae@gmail.com">이진우</a> All rights reserved.</p>
+        </footer>
+    </div><!-- container 닫기 -->
+    
+    <script src="global-menu.js"></script>
+    <script>
+        // 검색 기능
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('terms-search-input');
+            const termItems = document.querySelectorAll('.term-item');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                termItems.forEach(item => {
+                    const term = item.querySelector('dt').textContent.toLowerCase();
+                    const description = item.querySelector('dd').textContent.toLowerCase();
+                    
+                    if (term.includes(searchTerm) || description.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // 검색 결과에 따라 섹션 표시/숨김
+                document.querySelectorAll('.terms-section').forEach(section => {
+                    const visibleItems = section.querySelectorAll('.term-item[style="display: block"]').length;
+                    section.style.display = visibleItems > 0 ? 'block' : 'none';
+                });
+            });
+            
+            // 맨 위로 스크롤 버튼
+            const backToTop = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTop.style.display = 'block';
+                } else {
+                    backToTop.style.display = 'none';
+                }
+            });
+            
+            backToTop.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -9,7 +9,7 @@ function createMenu() {
     <nav class="top-nav">
         <div class="nav-container">
             <a href="${pathPrefix}index.html" class="logo">
-                도예 교육과정
+                <img src="${pathPrefix}images/logo.png" alt="도예수업" class="logo-image">
             </a>
             
             <button class="mobile-menu-btn" aria-label="메뉴 열기" aria-expanded="false">
