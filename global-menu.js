@@ -1,25 +1,23 @@
 // 메뉴 구조 생성 함수
 function createMenu() {
-    // 현재 페이지의 URL 경로와 호스트 확인
-    const currentPath = window.location.pathname;
-    const currentHost = window.location.hostname;
+    // 현재 페이지의 URL 확인
+    const currentLocation = window.location;
+    const currentHost = currentLocation.hostname;
     
-    // GitHub Pages 호스트인지 확인 (jinwooleegit.github.io)
-    const isGitHubPages = currentHost === 'jinwooleegit.github.io';
+    // 메뉴 링크의 베이스 URL 설정
+    let baseUrl = '';
     
-    // 경로 접두사 설정 - GitHub Pages에서는 항상 /potteryclass/ 경로 사용
-    let pathPrefix = '';
-    
-    if (isGitHubPages) {
-        pathPrefix = '/potteryclass/';
+    // GitHub Pages 환경(jinwooleegit.github.io)에서는 전체 URL을 사용
+    if (currentHost === 'jinwooleegit.github.io') {
+        baseUrl = 'https://jinwooleegit.github.io/potteryclass/';
     }
     
     // 메뉴 HTML 생성
     const menuHTML = `
     <nav class="top-nav">
         <div class="nav-container">
-            <a href="${pathPrefix}index.html" class="logo">
-                <img src="${pathPrefix}images/logo.png" alt="도예수업" class="logo-image">
+            <a href="${baseUrl}index.html" class="logo">
+                <img src="${baseUrl}images/logo.png" alt="도예수업" class="logo-image">
             </a>
             
             <button class="mobile-menu-btn" aria-label="메뉴 열기" aria-expanded="false">
@@ -27,14 +25,14 @@ function createMenu() {
             </button>
             
             <ul class="nav-links">
-                <li><a href="${pathPrefix}index.html" class="nav-item" id="menu-home">홈</a></li>
-                <li><a href="${pathPrefix}chapter1.html" class="nav-item" id="menu-chapter1">성형</a></li>
-                <li><a href="${pathPrefix}chapter2.html" class="nav-item" id="menu-chapter2">정형</a></li>
-                <li><a href="${pathPrefix}chapter3.html" class="nav-item" id="menu-chapter3">장식</a></li>
-                <li><a href="${pathPrefix}chapter4.html" class="nav-item" id="menu-chapter4">초벌</a></li>
-                <li><a href="${pathPrefix}chapter5.html" class="nav-item" id="menu-chapter5">유약</a></li>
-                <li><a href="${pathPrefix}chapter6.html" class="nav-item" id="menu-chapter6">재벌</a></li>
-                <li><a href="${pathPrefix}chapter7.html" class="nav-item" id="menu-chapter7">마케팅</a></li>
+                <li><a href="${baseUrl}index.html" class="nav-item" id="menu-home">홈</a></li>
+                <li><a href="${baseUrl}chapter1.html" class="nav-item" id="menu-chapter1">성형</a></li>
+                <li><a href="${baseUrl}chapter2.html" class="nav-item" id="menu-chapter2">정형</a></li>
+                <li><a href="${baseUrl}chapter3.html" class="nav-item" id="menu-chapter3">장식</a></li>
+                <li><a href="${baseUrl}chapter4.html" class="nav-item" id="menu-chapter4">초벌</a></li>
+                <li><a href="${baseUrl}chapter5.html" class="nav-item" id="menu-chapter5">유약</a></li>
+                <li><a href="${baseUrl}chapter6.html" class="nav-item" id="menu-chapter6">재벌</a></li>
+                <li><a href="${baseUrl}chapter7.html" class="nav-item" id="menu-chapter7">마케팅</a></li>
             </ul>
             
             <button class="dark-mode-toggle" aria-label="다크 모드 전환">
@@ -50,15 +48,15 @@ function createMenu() {
     bodyEl.insertBefore(tempDiv.firstElementChild, bodyEl.firstChild);
     
     // 현재 활성화된 페이지 강조
-    const currentLocation = window.location.pathname;
+    const currentPath = window.location.pathname;
     const navItems = document.querySelectorAll('.nav-item');
     
     navItems.forEach(item => {
         const href = item.getAttribute('href');
         const hrefBase = href.split('/').pop(); // 경로에서 파일명만 추출
         
-        if (currentLocation.includes(hrefBase) || 
-            (hrefBase === 'index.html' && (currentLocation.endsWith('/') || currentLocation.endsWith('/potteryclass/')))) {
+        if (currentPath.includes(hrefBase) || 
+            (hrefBase === 'index.html' && (currentPath.endsWith('/') || currentPath.endsWith('/potteryclass/')))) {
             item.classList.add('active');
         }
     });
