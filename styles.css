@@ -691,7 +691,7 @@ a:focus, button:focus {
     --primary-color: #90caf9;
     --secondary-color: #64b5f6;
     --accent-color: #ffb74d;
-    --text-color: #e0e0e0;
+    --text-color: #f0f0f0;  /* 더 밝은 텍스트 색상으로 변경 */
     --light-text: #FFFFFF;
     --background-color: #121212;
     --card-background: #1e1e1e;
@@ -699,6 +699,31 @@ a:focus, button:focus {
     --border-color: #333333;
     --header-background: linear-gradient(135deg, #0d47a1, #1565c0);
     --menu-hover: rgba(144, 202, 249, 0.1);
+    --secondary-text: #c0c0c0;  /* 부가적인 텍스트를 위한 색상 추가 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* 다크모드에서 본문 텍스트 스타일 개선 */
+.dark-mode p, 
+.dark-mode li, 
+.dark-mode td {
+    color: var(--text-color);
+    font-weight: 400;  /* 폰트 두께를 약간 더 두껍게 */
+    letter-spacing: 0.01em;  /* 자간 약간 증가 */
+}
+
+.dark-mode .module-content p,
+.dark-mode .content-section p {
+    line-height: 1.9;  /* 라인 높이 증가 */
+}
+
+/* 다크모드에서 부가적인 텍스트 스타일 */
+.dark-mode .img-caption, 
+.dark-mode .subtitle, 
+.dark-mode small {
+    color: var(--secondary-text);
 }
 
 .dark-mode .chapter-card,
@@ -709,11 +734,78 @@ a:focus, button:focus {
 
 .dark-mode .key-points {
     background-color: #242424;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 20px;
 }
 
 .dark-mode footer {
     background-color: #1e1e1e;
     color: #aaa;
+}
+
+/* 다크모드에서 콘텐츠 모듈 개선 */
+.dark-mode .content-module {
+    border-color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .content-module h4 {
+    color: var(--primary-color);
+    border-bottom-color: #3a3a3a;
+}
+
+/* 다크모드에서 코드 블록 가독성 개선 */
+.dark-mode code, 
+.dark-mode pre {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+/* 다크모드에서 목록 스타일 개선 */
+.dark-mode ul, 
+.dark-mode ol {
+    padding-left: 1.5rem;
+}
+
+.dark-mode .key-points ul li {
+    background-color: #2a2a2a;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    list-style-position: inside;
+}
+
+/* 다크모드에서 블록 인용문 개선 */
+.dark-mode blockquote {
+    background-color: #2a2a2a;
+    border-left: 4px solid var(--primary-color);
+    padding: 15px;
+    margin: 20px 0;
+    color: var(--text-color);
+}
+
+/* 다크모드에서 테이블 가독성 개선 */
+.dark-mode table {
+    border: 1px solid #333;
+}
+
+.dark-mode th {
+    background-color: #2a2a2a;
+}
+
+.dark-mode tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+.dark-mode tr:nth-child(odd) {
+    background-color: #222;
+}
+
+/* 수식어 클래스가 있는 텍스트 요소들의 다크모드 스타일 */
+.dark-mode .highlight {
+    background-color: rgba(255, 215, 0, 0.2);
+    color: #ffeb3b;
 }
 
 /* 테이블 스타일 */
@@ -1330,6 +1422,12 @@ footer {
 /* 다크 모드 스타일 */
 .dark-mode .content-module {
     border-color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .content-module h4 {
+    color: var(--primary-color);
+    border-bottom-color: #3a3a3a;
 }
 
 /* 반응형 디자인 */
@@ -1512,4 +1610,57 @@ footer {
     .guide-section h3 {
         font-size: 1.2rem;
     }
+}
+
+/* 다크모드에서 콘텐츠 모듈 배경색 약간 더 밝게 */
+.dark-mode .content-module, 
+.dark-mode section, 
+.dark-mode .plan-content, 
+.dark-mode .script-content {
+    background-color: #242424;
+}
+
+/* 다크모드에서 링크 색상 조정 */
+.dark-mode a {
+    color: var(--primary-color);
+}
+
+.dark-mode a:hover {
+    color: var(--secondary-color);
+}
+
+/* 다크모드에서 강조 텍스트 */
+.dark-mode strong, 
+.dark-mode b, 
+.dark-mode h3, 
+.dark-mode h4 {
+    color: var(--light-text);
+}
+
+/* 다크모드에서 특정 콘텐츠 개선 */
+.dark-mode .content-section p,
+.dark-mode .module-content p,
+.dark-mode .script-content p {
+    font-size: 1.05em;
+    max-width: 80ch;  /* 최적 가독성을 위한 라인 길이 제한 */
+}
+
+/* 다크모드에서 중요 정보의 강조 */
+.dark-mode .key-points {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 20px;
+}
+
+/* 다크모드에서 아이콘 및 이미지 밝기 조정 */
+.dark-mode img:not([src*="logo"]):not(.no-dark-filter) {
+    filter: brightness(0.9);
+}
+
+/* 다크모드에서 폼 요소 개선 */
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+    background-color: #2a2a2a;
+    color: var(--text-color);
+    border: 1px solid #444;
 } 
