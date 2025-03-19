@@ -179,6 +179,28 @@ document.addEventListener('DOMContentLoaded', () => {
             title: '소성 관련 용어',
             url: 'pottery-terms.html#section-ㅅ',
             content: '초벌, 재벌, 환원소성, 산화소성 등 도자기를 구워내는 과정과 관련된 용어들을 설명합니다.'
+        },
+        
+        // 사용설명서 관련 항목 추가
+        {
+            title: '홈페이지 사용설명서',
+            url: 'user-guide.html',
+            content: '도자기공작소 숨 홈페이지를 효과적으로 사용하는 방법을 안내합니다. 사이트 개요, 메뉴 탐색, 검색 기능, 챕터 내 이동 방법, 다크모드 설정 등 다양한 기능을 확인할 수 있습니다.'
+        },
+        {
+            title: '메뉴 및 탐색 방법',
+            url: 'user-guide.html#navigation',
+            content: '상단 메뉴를 통해 원하는 챕터나 페이지로 쉽게 이동할 수 있습니다. 모바일 화면에서는 햄버거 아이콘을 클릭하여 메뉴를 열 수 있습니다.'
+        },
+        {
+            title: '검색 기능 활용하기',
+            url: 'user-guide.html#search-guide',
+            content: '원하는 정보를 빠르게 찾기 위해 상단 검색창을 활용하세요. 정확한 키워드를 사용하고, 여러 키워드를 시도해 보며, 앵커 링크를 활용하면 더 효과적으로 검색할 수 있습니다.'
+        },
+        {
+            title: '모바일 사용자를 위한 팁',
+            url: 'user-guide.html#mobile-experience',
+            content: '도자기공작소 숨 홈페이지는 모바일 환경에 최적화되어 있습니다. 반응형 레이아웃, 가로 스크롤 최소화, 터치 친화적 요소, 빠른 로딩 등의 모바일 최적화 기능을 제공합니다.'
         }
     ];
     
