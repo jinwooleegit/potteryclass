@@ -24,6 +24,7 @@ function createMenu() {
                 <li><a href="${pathPrefix}chapter4.html" class="nav-item" id="menu-chapter4">초벌</a></li>
                 <li><a href="${pathPrefix}chapter5.html" class="nav-item" id="menu-chapter5">유약</a></li>
                 <li><a href="${pathPrefix}chapter6.html" class="nav-item" id="menu-chapter6">재벌</a></li>
+                <li><a href="${pathPrefix}chapter7.html" class="nav-item" id="menu-chapter7">마케팅</a></li>
             </ul>
             
             <button class="dark-mode-toggle" aria-label="다크 모드 전환">
