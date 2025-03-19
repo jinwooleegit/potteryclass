@@ -1,21 +1,16 @@
 // 메뉴 구조 생성 함수
 function createMenu() {
-    // 현재 페이지의 URL 경로 확인
+    // 현재 페이지의 URL 경로와 호스트 확인
     const currentPath = window.location.pathname;
+    const currentHost = window.location.hostname;
     
-    // GitHub Pages 배포 경로인지 확인 (jinwooleegit.github.io/potteryclass/)
-    const isGitHubPages = currentPath.includes('/potteryclass/');
+    // GitHub Pages 호스트인지 확인 (jinwooleegit.github.io)
+    const isGitHubPages = currentHost === 'jinwooleegit.github.io';
     
-    // 현재 페이지가 하위 디렉토리(chapter 폴더)에 있는지 확인
-    const isSubpage = currentPath.includes('/chapter');
+    // 경로 접두사 설정 - GitHub Pages에서는 항상 /potteryclass/ 경로 사용
+    let pathPrefix = '';
     
-    // 경로 접두사 설정
-    let pathPrefix = isSubpage ? '../' : '';
-    
-    // GitHub Pages에서 실행 중이라면 potteryclass 경로 추가
-    if (isGitHubPages && !isSubpage) {
-        pathPrefix = '/potteryclass/';
-    } else if (isGitHubPages && isSubpage) {
+    if (isGitHubPages) {
         pathPrefix = '/potteryclass/';
     }
     
@@ -62,7 +57,7 @@ function createMenu() {
         const href = item.getAttribute('href');
         const hrefBase = href.split('/').pop(); // 경로에서 파일명만 추출
         
-        if (currentLocation.endsWith(hrefBase) || 
+        if (currentLocation.includes(hrefBase) || 
             (hrefBase === 'index.html' && (currentLocation.endsWith('/') || currentLocation.endsWith('/potteryclass/')))) {
             item.classList.add('active');
         }
