@@ -12,39 +12,118 @@
     <meta property="og:image" content="https://jinwooleegit.github.io/potteryclass/images/pottery-banner.jpg">
     
     <!-- 파비콘 -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="images/site.webmanifest">
     
     <!-- 폰트 최적화 -->
-    <link rel="preload" href="fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- 스타일시트 -->
     <link rel="stylesheet" href="styles.css">
     
-    <!-- 스크립트 -->
-    <script src="js/global-menu.js" defer></script>
-    <script src="js/dark-mode.js" defer></script>
-    <script src="js/image-optimizer.js" defer></script>
+    <style>
+    /* 사용 설명서 페이지 전용 스타일 */
+    .user-guide-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .guide-section {
+        background-color: var(--card-background);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+    
+    .guide-section h2 {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--border-color);
+    }
+    
+    .guide-section h3 {
+        color: var(--primary-color);
+        font-size: 1.3rem;
+        margin: 20px 0 15px;
+    }
+    
+    .info-box, .tip-box {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 15px 20px;
+        margin: 20px 0;
+    }
+    
+    .info-box {
+        border-left: 4px solid var(--primary-color);
+    }
+    
+    .tip-box {
+        border-left: 4px solid var(--accent-color);
+    }
+    
+    .guide-section ul, 
+    .guide-section ol {
+        padding-left: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .guide-section li {
+        margin-bottom: 8px;
+        line-height: 1.6;
+    }
+    
+    .grid-container.two-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    
+    .grid-item {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    
+    .contact-info {
+        text-align: center;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+    
+    @media (max-width: 768px) {
+        .grid-container.two-columns {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
 </head>
 <body>
-    <!-- 글로벌 메뉴는 JavaScript로 삽입됨 -->
-    <div id="global-menu"></div>
-    
     <div class="container fade-in">
-        <header class="page-header">
-            <h1>홈페이지 사용설명서</h1>
-            <p class="subtitle">도자기공작소 숨 홈페이지를 효과적으로 사용하는 방법</p>
-            
-            <nav aria-label="Breadcrumb" class="breadcrumb">
-                <ul>
-                    <li><a href="index.html">홈</a></li>
-                    <li aria-current="page">홈페이지 사용설명서</li>
-                </ul>
-            </nav>
+        <header class="main-header">
+            <h1>도예수업</h1>
+            <h2>홈페이지 사용설명서</h2>
         </header>
         
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li>홈페이지 사용설명서</li>
+            </ul>
+        </nav>
+
         <main class="user-guide-content">
             <section class="guide-section" id="site-overview">
                 <h2>1. 사이트 개요</h2>
@@ -80,7 +159,7 @@
                         <p>모바일 화면에서는 상단 우측의 햄버거 아이콘(☰)을 클릭하여 메뉴를 열 수 있습니다.</p>
                         <ol>
                             <li>햄버거 아이콘을 탭합니다.</li>
-                            <li>펼쳐진 메뉴에서 원하는, 항목을 선택합니다.</li>
+                            <li>펼쳐진 메뉴에서 원하는 항목을 선택합니다.</li>
                             <li>다시 탭하면 메뉴가 닫힙니다.</li>
                         </ol>
                     </div>
@@ -252,12 +331,24 @@
                     </ul>
                 </div>
             </section>
+            
+            <nav class="chapter-navigation">
+                <a href="index.html" class="nav-link home" aria-label="홈으로 이동하기">홈으로</a>
+            </nav>
         </main>
         
         <footer class="footer">
+            <div class="footer-links">
+                <a href="sitemap.html">사이트맵</a> | 
+                <a href="pottery-terms.html">도자기용어집</a> | 
+                <a href="user-guide.html">사용설명서</a>
+            </div>
             <p>2025© <a href="mailto:milgae@naver.com">도자기공작소 숨</a>. All rights reserved.</p>
         </footer>
     </div>
+    
+    <!-- 전역 메뉴 스크립트 -->
+    <script src="global-menu.js"></script>
     
     <!-- 페이지 스크립트 -->
     <script>
