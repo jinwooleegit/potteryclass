@@ -9,7 +9,7 @@ function createMenu() {
     <nav class="top-nav">
         <div class="nav-container">
             <a href="${pathPrefix}index.html" class="logo">
-                <img src="${pathPrefix}images/logo.png" alt="도자기공작소 숨" class="logo-image">
+                <img src="${pathPrefix}images/logo.png" alt="도예수업" class="logo-image">
             </a>
             
             <button class="mobile-menu-btn" aria-label="메뉴 열기" aria-expanded="false">
@@ -18,16 +18,13 @@ function createMenu() {
             
             <ul class="nav-links">
                 <li><a href="${pathPrefix}index.html" class="nav-item" id="menu-home">홈</a></li>
-                <li><a href="${pathPrefix}chapter1.html" class="nav-item" id="menu-chapter1">챕터 1: 성형</a></li>
-                <li><a href="${pathPrefix}chapter2.html" class="nav-item" id="menu-chapter2">챕터 2: 정형</a></li>
-                <li><a href="${pathPrefix}chapter3.html" class="nav-item" id="menu-chapter3">챕터 3: 장식</a></li>
-                <li><a href="${pathPrefix}chapter4.html" class="nav-item" id="menu-chapter4">챕터 4: 초벌</a></li>
-                <li><a href="${pathPrefix}chapter5.html" class="nav-item" id="menu-chapter5">챕터 5: 유약</a></li>
-                <li><a href="${pathPrefix}chapter6.html" class="nav-item" id="menu-chapter6">챕터 6: 재벌</a></li>
-                <li><a href="${pathPrefix}chapter7.html" class="nav-item" id="menu-chapter7">챕터 7: 마케팅</a></li>
-                <li><a href="${pathPrefix}pottery-terms.html" class="nav-item" id="menu-terms">용어집</a></li>
-                <li><a href="${pathPrefix}user-guide.html" class="nav-item" id="menu-guide">사용설명서</a></li>
-                <li><a href="${pathPrefix}sitemap.html" class="nav-item" id="menu-sitemap">사이트맵</a></li>
+                <li><a href="${pathPrefix}chapter1.html" class="nav-item" id="menu-chapter1">성형</a></li>
+                <li><a href="${pathPrefix}chapter2.html" class="nav-item" id="menu-chapter2">정형</a></li>
+                <li><a href="${pathPrefix}chapter3.html" class="nav-item" id="menu-chapter3">장식</a></li>
+                <li><a href="${pathPrefix}chapter4.html" class="nav-item" id="menu-chapter4">초벌</a></li>
+                <li><a href="${pathPrefix}chapter5.html" class="nav-item" id="menu-chapter5">유약</a></li>
+                <li><a href="${pathPrefix}chapter6.html" class="nav-item" id="menu-chapter6">재벌</a></li>
+                <li><a href="${pathPrefix}chapter7.html" class="nav-item" id="menu-chapter7">마케팅</a></li>
             </ul>
             
             <button class="dark-mode-toggle" aria-label="다크 모드 전환">
