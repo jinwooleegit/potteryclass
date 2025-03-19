@@ -18,12 +18,12 @@ function createMenu() {
             
             <ul class="nav-links">
                 <li><a href="${pathPrefix}index.html" class="nav-item" id="menu-home">홈</a></li>
-                <li><a href="${pathPrefix}chapter1.html" class="nav-item" id="menu-chapter1">성형 단계</a></li>
-                <li><a href="${pathPrefix}chapter2.html" class="nav-item" id="menu-chapter2">정형 단계</a></li>
-                <li><a href="${pathPrefix}chapter3.html" class="nav-item" id="menu-chapter3">장식 단계</a></li>
-                <li><a href="${pathPrefix}chapter4.html" class="nav-item" id="menu-chapter4">초벌 단계</a></li>
-                <li><a href="${pathPrefix}chapter5.html" class="nav-item" id="menu-chapter5">유약과 시유</a></li>
-                <li><a href="${pathPrefix}chapter6.html" class="nav-item" id="menu-chapter6">작품 완성과 평가</a></li>
+                <li><a href="${pathPrefix}chapter1.html" class="nav-item" id="menu-chapter1">성형</a></li>
+                <li><a href="${pathPrefix}chapter2.html" class="nav-item" id="menu-chapter2">정형</a></li>
+                <li><a href="${pathPrefix}chapter3.html" class="nav-item" id="menu-chapter3">장식</a></li>
+                <li><a href="${pathPrefix}chapter4.html" class="nav-item" id="menu-chapter4">초벌</a></li>
+                <li><a href="${pathPrefix}chapter5.html" class="nav-item" id="menu-chapter5">유약</a></li>
+                <li><a href="${pathPrefix}chapter6.html" class="nav-item" id="menu-chapter6">재벌</a></li>
             </ul>
             
             <button class="dark-mode-toggle" aria-label="다크 모드 전환">
