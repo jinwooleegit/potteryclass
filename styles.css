@@ -823,7 +823,7 @@ a:focus-visible, button:focus-visible {
     height: auto;
     display: block;
     border-radius: 8px;
-    box-shadow: var(--shadow);
+    transition: opacity 0.3s ease;
 }
 
 /* 이미지 캡션 */
@@ -845,8 +845,9 @@ a:focus-visible, button:focus-visible {
     width: 100%;
     height: auto;
     display: block;
-    max-height: 300px;
+    max-height: 400px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 /* 소개 콘텐츠 레이아웃 */
@@ -1389,4 +1390,43 @@ footer {
 
 .dark-mode .content-image .img-caption {
     color: #aaa;
+}
+
+/* 이미지 최적화 관련 스타일 */
+.blur-load {
+    filter: blur(10px);
+    transition: filter 0.3s ease;
+}
+
+.loaded {
+    filter: blur(0);
+}
+
+.lazy-background {
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.3s ease;
+}
+
+/* 이미지 컨테이너 */
+.img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+}
+
+.placeholder-img {
+    background-color: #f0f0f0;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+@media (prefers-reduced-data: reduce) {
+    img:not(.critical-img) {
+        content-visibility: auto;
+    }
 } 
