@@ -1345,4 +1345,48 @@ footer {
     .course-content h3 {
         font-size: 1.4em;
     }
+}
+
+/* 콘텐츠 이미지 스타일 */
+.content-image {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.content-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.content-image .img-caption {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.content-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+}
+
+/* 이미지 그리드 반응형 */
+@media (max-width: 768px) {
+    .content-image-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* 다크 모드에서 이미지 스타일 */
+.dark-mode .content-image img {
+    border-color: #444;
+}
+
+.dark-mode .content-image .img-caption {
+    color: #aaa;
 } 
