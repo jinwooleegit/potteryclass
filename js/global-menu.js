@@ -36,6 +36,7 @@ const menuHTML = `
         <li><a href="${homePath}chapter7.html" class="${currentPath.includes('chapter7') ? 'active' : ''}">챕터 7: 마케팅</a></li>
         <li><a href="${homePath}pottery-terms.html" class="${currentPath.includes('pottery-terms') ? 'active' : ''}">용어집</a></li>
         <li><a href="${homePath}user-guide.html" class="${currentPath.includes('user-guide') ? 'active' : ''}">사용설명서</a></li>
+        <li><a href="${homePath}sitemap.html" class="${currentPath.includes('sitemap') ? 'active' : ''}">사이트맵</a></li>
       </ul>
     </nav>
     <div class="menu-right">

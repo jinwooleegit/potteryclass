@@ -201,6 +201,13 @@ document.addEventListener('DOMContentLoaded', () => {
             title: '모바일 사용자를 위한 팁',
             url: 'user-guide.html#mobile-experience',
             content: '도자기공작소 숨 홈페이지는 모바일 환경에 최적화되어 있습니다. 반응형 레이아웃, 가로 스크롤 최소화, 터치 친화적 요소, 빠른 로딩 등의 모바일 최적화 기능을 제공합니다.'
+        },
+        
+        // 사이트맵 관련 항목 추가
+        {
+            title: '사이트맵',
+            url: 'sitemap.html',
+            content: '도자기공작소 숨 웹사이트의 모든 페이지를 한눈에 확인할 수 있는 사이트맵입니다. 원하는 페이지를 빠르게 찾아 접근할 수 있습니다.'
         }
     ];
     
