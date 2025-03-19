@@ -403,16 +403,6 @@ section h2 {
     background-color: var(--secondary-color);
 }
 
-.nav-link.prev::before {
-    content: "←";
-    margin-right: 8px;
-}
-
-.nav-link.next::after {
-    content: "→";
-    margin-left: 8px;
-}
-
 .nav-link.home {
     background-color: var(--text-color);
 }
