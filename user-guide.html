@@ -103,6 +103,28 @@
         margin: 20px 0;
     }
     
+    /* 다크모드 스타일 개선 */
+    .dark-mode .grid-item {
+        background-color: #2a2a2a;
+        border: 1px solid #444;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .dark-mode .contact-info {
+        background-color: #2a2a2a;
+        border: 1px solid #444;
+    }
+    
+    .dark-mode .info-box,
+    .dark-mode .tip-box {
+        background-color: #2a2a2a;
+        border-color: var(--primary-color);
+    }
+    
+    .dark-mode .tip-box {
+        border-color: var(--accent-color);
+    }
+    
     @media (max-width: 768px) {
         .grid-container.two-columns {
             grid-template-columns: 1fr;
