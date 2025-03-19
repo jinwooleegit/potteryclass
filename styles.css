@@ -1264,4 +1264,85 @@ footer {
     .chapter-card:hover .chapter-image img {
         transform: none;
     }
+}
+
+/* 강의 콘텐츠 스타일 */
+.course-content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.course-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 1.6em;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.course-content h3:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.content-module {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-module:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.content-module h4 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.module-content {
+    line-height: 1.8;
+}
+
+.module-content p {
+    margin-bottom: 15px;
+}
+
+.module-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* 다크 모드 스타일 */
+.dark-mode .content-module {
+    border-color: #333;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .content-module {
+        padding: 20px;
+    }
+    
+    .content-module h4 {
+        font-size: 1.3em;
+    }
+    
+    .course-content h3 {
+        font-size: 1.4em;
+    }
 } 
